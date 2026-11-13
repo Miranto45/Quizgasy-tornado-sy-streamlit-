@@ -1,0 +1,25 @@
+#:import dp kivy.metrics.dp
+
+<BoardScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        padding: dp(16)
+        spacing: dp(10)
+        Label:
+            text: 'Laharana'
+            font_size: '26sp'
+            bold: True
+            size_hint_y: None
+            height: dp(50)
+        Label:
+            text: root.status
+            size_hint_y: None
+            height: dp(26)
+        Label:
+            text: root.rows
+            font_size: '17sp'
+            text_size: self.width, self.height
+            valign: 'top'
+        GBtn:
+            text: 'Hiverina'
+            on_release: root.leave()

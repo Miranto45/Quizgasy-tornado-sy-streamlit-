@@ -1,0 +1,14 @@
+#:import dp kivy.metrics.dp
+
+<GBtn@Button>:
+    background_normal: ''
+    background_color: 0, .49, .23, 1
+    size_hint_y: None
+    height: dp(52)
+    font_size: '16sp'
+    text_size: self.width - dp(16), self.height
+    halign: 'center'
+    valign: 'middle'
+
+<RBtn@GBtn>:
+    background_color: .99, .24, .2, 1

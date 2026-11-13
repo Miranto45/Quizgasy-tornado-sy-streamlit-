@@ -1,0 +1,23 @@
+#:import dp kivy.metrics.dp
+
+<MenuScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        padding: dp(24)
+        spacing: dp(12)
+        Label:
+            text: 'Salama, ' + app.username + '!'
+            font_size: '24sp'
+            bold: True
+        Label:
+            text: root.stats
+        GBtn:
+            text: 'Hanomboka ny fanadinana (10 fanontaniana)'
+            on_release: app.root.get_screen('quiz').start()
+        GBtn:
+            text: 'Laharana (live)'
+            on_release: app.root.get_screen('board').open()
+        RBtn:
+            text: 'Hivoaka'
+            on_release: root.logout()
+        Widget:

@@ -1,0 +1,4 @@
+-r backend/fastapi_app/requirements.txt
+-r backend/tornado_app/requirements.txt
+-r frontend/streamlit_app/requirements.txt
+-r frontend/kivy_app/requirements.txt

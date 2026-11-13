@@ -1,0 +1,11 @@
+{
+  "python.analysis.extraPaths": [
+    "${workspaceFolder}/backend",
+    "${workspaceFolder}/backend/fastapi_app",
+    "${workspaceFolder}/backend/tornado_app",
+    "${workspaceFolder}/frontend/kivy_app",
+    "${workspaceFolder}/frontend/streamlit_app"
+  ],
+  "python.terminal.activateEnvironment": true,
+  "files.exclude": { "**/__pycache__": true }
+}

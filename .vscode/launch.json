@@ -1,0 +1,46 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "1. Backend FastAPI (8000)",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "uvicorn",
+      "args": ["main:app", "--reload", "--port", "8000"],
+      "cwd": "${workspaceFolder}/backend/fastapi_app",
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "2. Backend Tornado (8001)",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/backend/tornado_app/server.py",
+      "cwd": "${workspaceFolder}/backend/tornado_app",
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "3. Frontend Streamlit (8501)",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "streamlit",
+      "args": ["run", "app.py", "--server.port", "8501"],
+      "cwd": "${workspaceFolder}/frontend/streamlit_app",
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "4. Frontend Kivy (application)",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/frontend/kivy_app/main.py",
+      "cwd": "${workspaceFolder}/frontend/kivy_app",
+      "console": "integratedTerminal"
+    }
+  ],
+  "compounds": [
+    {
+      "name": "TOUT : FastAPI + Tornado + Streamlit",
+      "configurations": ["1. Backend FastAPI (8000)", "2. Backend Tornado (8001)", "3. Frontend Streamlit (8501)"],
+      "stopAll": true
+    }
+  ]
+}

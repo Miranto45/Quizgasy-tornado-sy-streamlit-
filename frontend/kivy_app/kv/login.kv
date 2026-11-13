@@ -1,0 +1,35 @@
+#:import dp kivy.metrics.dp
+
+<LoginScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        padding: dp(24)
+        spacing: dp(12)
+        Label:
+            text: 'Fanadinana Madagasikara'
+            font_size: '26sp'
+            bold: True
+        Label:
+            text: 'Hamarino ny fahalalanao ny Nosintsika'
+            size_hint_y: None
+            height: dp(30)
+        TextInput:
+            id: user
+            hint_text: 'Anarana'
+            multiline: False
+            size_hint_y: None
+            height: dp(46)
+        TextInput:
+            id: pwd
+            hint_text: 'Teny miafina'
+            password: True
+            multiline: False
+            size_hint_y: None
+            height: dp(46)
+        GBtn:
+            text: 'Hiditra'
+            on_release: root.submit('/login', user.text, pwd.text)
+        RBtn:
+            text: 'Hamorona kaonty'
+            on_release: root.submit('/register', user.text, pwd.text)
+        Widget:

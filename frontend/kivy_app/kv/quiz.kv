@@ -1,0 +1,29 @@
+#:import dp kivy.metrics.dp
+
+<QuizScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        padding: dp(16)
+        spacing: dp(10)
+        Label:
+            text: root.progress
+            size_hint_y: None
+            height: dp(30)
+        Label:
+            text: root.question
+            font_size: '20sp'
+            text_size: self.width, self.height
+            halign: 'center'
+            valign: 'middle'
+        GBtn:
+            id: c0
+            on_release: root.answer(0)
+        GBtn:
+            id: c1
+            on_release: root.answer(1)
+        GBtn:
+            id: c2
+            on_release: root.answer(2)
+        GBtn:
+            id: c3
+            on_release: root.answer(3)
